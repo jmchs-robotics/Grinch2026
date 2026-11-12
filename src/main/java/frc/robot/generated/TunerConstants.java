@@ -117,8 +117,8 @@ public class TunerConstants {
   public static final SwerveDrivetrainConstants DrivetrainConstants =
       new SwerveDrivetrainConstants()
           .withCANBusName(kCANBus.getName())
-          .withGyroIONavX Id(kGyroId)
-          .withGyroIONavX Configs(GyroConfigs);
+          .withGyroIONavXId(kGyroId)
+          .withGyroIONavXConfigs(GyroConfigs);
 
   private static final SwerveModuleConstantsFactory<
           TalonFXConfiguration, TalonFXConfiguration, CANcoderConfiguration>
