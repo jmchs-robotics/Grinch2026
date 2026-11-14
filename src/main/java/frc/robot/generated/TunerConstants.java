@@ -83,7 +83,7 @@ public class TunerConstants {
                   .withStatorCurrentLimitEnable(true));
   private static final CANcoderConfiguration encoderInitialConfigs = new CANcoderConfiguration();
   // Configs for the Pieon 2; leave this null to skip applying Pieon 2 configs
-  private static final GyroIONavX Configuration GyroConfigs = null;
+  //private static final GyroIONavXConfiguration GyroConfigs = null;
 
   // CAN bus that the devices are located on;
   // All swerve devices must share the same CAN bus
@@ -114,11 +114,13 @@ public class TunerConstants {
   private static final Voltage kSteerFrictionVoltage = Volts.of(0.2);
   private static final Voltage kDriveFrictionVoltage = Volts.of(0.2);
 
-  public static final SwerveDrivetrainConstants DrivetrainConstants =
-      new SwerveDrivetrainConstants()
-          .withCANBusName(kCANBus.getName())
-          .withGyroIONavXId(kGyroId)
-          .withGyroIONavXConfigs(GyroConfigs);
+//   angry pigion
+
+//   public static final SwerveDrivetrainConstants DrivetrainConstants =
+//       new SwerveDrivetrainConstants()
+//           .withCANBusName(kCANBus.getName())
+//           .withGyroIONavXId(kGyroId)
+//           .withGyroIONavXConfigs(GyroConfigs);
 
   private static final SwerveModuleConstantsFactory<
           TalonFXConfiguration, TalonFXConfiguration, CANcoderConfiguration>
