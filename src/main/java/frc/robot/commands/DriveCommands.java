@@ -31,7 +31,7 @@ import java.util.function.DoubleSupplier;
 import java.util.function.Supplier;
 
 public class DriveCommands {
-  private static final double DEADBAND = 0.1;
+  private static final double DEADBAND = 0.15;
   private static final double ANGLE_KP = 0.5;
   private static final double ANGLE_KD = 0.4;
   private static final double ANGLE_MAX_VELOCITY = 8.0;
@@ -45,8 +45,15 @@ public class DriveCommands {
 
   private static Translation2d getLinearVelocityFromJoysticks(double x, double y) {
     // Apply deadband
-    double linearMagnitude = MathUtil.applyDeadband(Math.hypot(x, y), DEADBAND);
-    Rotation2d linearDirection = new Rotation2d(Math.atan2(y, x));
+    
+    //double linearMagnitude = MathUtil.applyDeadband(Math.hypot(x, y), DEADBAND);
+    //Rotation2d linearDirection = new Rotation2d(Math.atan2(y, x));
+
+    x = MathUtil.applyDeadband(x, DEADBAND);
+    y = MathUtil.applyDeadband(y, DEADBAND);
+
+    double linearMagnitude = Math.hypot(x,y);
+    Rotation2d linearDirection = new Rotation2d(Math.atan2(y,x));
 
     // Square magnitude for more precise control
     linearMagnitude = linearMagnitude * linearMagnitude;
