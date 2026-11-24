@@ -1,13 +1,13 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.subsystems.shooter.Extake;
+import frc.robot.subsystems.extake.Extake;
 
-public class ExtakeCommands extends Command {
+public class ExtakeCommand extends Command {
 
   private final Extake m_Extake;
 
-  public ExtakeCommands(Extake extakeWheels) {
+  public ExtakeCommand(Extake extakeWheels) {
 
     m_Extake = extakeWheels;
     addRequirements(m_Extake);
@@ -18,7 +18,7 @@ public class ExtakeCommands extends Command {
 
   @Override
   public void execute() {
-    m_Extake.setWheelMotors(1);
+    m_Extake.setWheelMotors(0.3);
   }
 
   @Override
