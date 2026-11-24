@@ -3,7 +3,7 @@ package frc.robot.subsystems.shooter;
 import com.revrobotics.spark.SparkFlex;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import frc.robot.commands.ShooterCommands;
+import frc.robot.commands.ExtakeCommands;
 import frc.robot.Constants.extakeConstants;
 
 //Neo Vortex motor
