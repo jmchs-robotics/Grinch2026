@@ -14,7 +14,7 @@ public class Extake extends SubsystemBase {
 
   public Extake() {
 
-    extakeMotor = new SparkFlex(extakeConstants.motorID, MotorType.kBrushless);
+    extakeMotor = new SparkFlex(extakeConstants.extakeID, MotorType.kBrushless);
 
   }
 

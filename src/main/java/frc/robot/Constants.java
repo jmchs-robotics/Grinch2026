@@ -31,7 +31,7 @@ public final class Constants {
 
   public static final class extakeConstants {
 
-    
+    public static final int extakeID = 13;
 
   }
 }
